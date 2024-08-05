@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { FaHome, FaUser, FaCog } from 'react-icons/fa';
 import { PiSidebarLight, PiChatTeardropDots, PiSquaresFour } from 'react-icons/pi';
+import gptLogo from '../../assets/images/gpt_logo.png';  
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+    setIsSidebarOpen(!isSidebarOpen); 
   };
 
   return (
@@ -37,7 +38,7 @@ const Sidebar = () => {
             <li>
               <div className="relative group">
                 <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-700 text-black">
-                  <img src='../../src/assets/images/gpt_logo.png' alt='' className="w-9 h-6 mr-3 font-bold" />
+                  <img src={gptLogo} alt="ChatGPT Logo" className="w-9 h-6 mr-3 font-bold" />
                   <span className='text-2xl font-bold'>ChatGPT</span>
                 </a>
               </div>
