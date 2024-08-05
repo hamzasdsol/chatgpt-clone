@@ -11,8 +11,9 @@ const App = () => {
         <Sidebar className="w-2/12" />
         <div className="w-10/12 flex flex-col">
           <Header />
-          <Main/>
-        
+          <main className="flex-grow">
+            <Main />
+          </main>
           <Footer />
         </div>
       </div>
@@ -21,4 +22,3 @@ const App = () => {
 }
 
 export default App;
-
