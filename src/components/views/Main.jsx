@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <div className="flex-1 bg-white p-6 flex flex-col items-center">
       <img 
-        src="src/assets/images/gpt logo.png" 
+        src="../../src/assets/images/gpt_logo.png" 
         className="w-32 h-auto mt-9 mb-6" 
         alt="GPT Logo" 
       /> 
