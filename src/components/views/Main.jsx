@@ -1,14 +1,15 @@
 import React from 'react';
-import { FaBeer, FaCoffee, FaApple, FaAndroid } from 'react-icons/fa'; // Import the icons you want to use
-
+import { FaBeer, FaCoffee, FaApple, FaAndroid } from 'react-icons/fa'; 
+import gptLogo from '../../assets/images/gpt_logo.png';
 const Main = () => {
   return (
     <div className="flex-1 bg-white p-6 flex flex-col items-center">
-      <img 
-        src="../../src/assets/images/gpt_logo.png" 
-        className="w-32 h-auto mt-9 mb-6" 
-        alt="GPT Logo" 
-      /> 
+     <img 
+  src={gptLogo} 
+  alt="ChatGPT Logo" 
+  className="w-40 h-auto mr-3 font-bold" 
+/>
+
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-row overflow-x-auto">
