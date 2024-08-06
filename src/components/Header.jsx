@@ -3,8 +3,8 @@ import { RiArrowDropDownLine, RiShare2Line } from "react-icons/ri";
 import { SiGmail } from "react-icons/si";
 import GenericModal from './styles/GenericModal';
 import starImage from '../assets/images/star.jfif';
-import chatGPTImage from '../assets/images/images.jfif'; 
-import tempChatImage from '../assets/images/download.png';  
+import chatGPTImage from '../assets/images/images.jfif';
+import tempChatImage from '../assets/images/download.png';
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,11 +18,12 @@ const Header = () => {
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center cursor-pointer">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer">
           <span className="ml-3 text-3xl font-bold text-gray-500">ChatGPT</span>
-          <span className="text-5xl text-gray-400 md:shrink-0" onClick={toggleModal}>
+          <span className="text-5xl text-gray-400 md:shrink-0 cursor-pointer" onClick={toggleModal}>
             <RiArrowDropDownLine />
           </span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          {/* Add navigation links here if needed */}
         </nav>
         <div className="flex items-center ml-8 space-x-5">
           <a className="text-4xl relative group" title="Share">
