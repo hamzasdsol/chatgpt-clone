@@ -9,14 +9,14 @@ const Footer = () => {
           {/* Textarea Container */}
           <div className="relative col-span-1 md:col-span-10">
             <textarea
-              className="w-full border-2 border-gray-200 rounded-full py-2 px-12 resize-none bg-gray-200 text-black placeholder-gray-500 focus:outline-none"
+              className="w-full mt-4 border-2 border-gray-200 rounded-full py-2 px-12 resize-none bg-gray-200 text-black placeholder-gray-500 focus:outline-none"
               placeholder="Message ChatGPT..."
             ></textarea>
-            <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black text-xl font-bold">
+            <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black text-2xl font-bold">
               <FaPaperclip />
             </div>
             {/* New Icon */}
-            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black text-xl font-bold">
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black text-2xl font-bold">
               <FaArrowCircleUp /> {/* Use the new icon */}
             </div>
           </div>
