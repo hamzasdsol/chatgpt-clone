@@ -11,9 +11,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={`grid grid-cols-sidebar bg-gray-100 text-white min-h-screen ${isSidebarOpen ? 'w-64' : 'w-16'} transition-all duration-300`}>
+    <div className={`grid grid-cols-sidebar bg-gray-100 text-white min-h-screen ${isSidebarOpen ? 'w-80' : 'w-16'} transition-all duration-300`}>
      
-      <aside className={`bg-gray-100 text-white min-h-screen ${isSidebarOpen ? 'w-64' : 'w-16'} transition-all duration-300`}>
+      <aside className={`bg-gray-100 text-white min-h-screen ${isSidebarOpen ? 'w-80' : 'w-16'} transition-all duration-300`}>
         <div className="p-4 flex items-center justify-between">
           <div className="relative group mt-6">
             <button onClick={toggleSidebar} className="text-4xl font-bold text-black">
@@ -36,20 +36,20 @@ const Sidebar = () => {
         </div>
         {isSidebarOpen && (
           <nav className="grid-cols-1 overflow-y-auto">
-            <ul className="space-y-2 p-4">
+            <ul className="space-y-4 p-4">
               <li>
                 <div className="relative group">
-                  <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-700 text-black">
-                    <img src={gptLogo} alt="ChatGPT Logo" className="w-9 h-6 mr-3 font-bold" />
-                    <span className='text-2xl font-bold'>ChatGPT</span>
+                  <a href="#" className="flex items-center p-3 rounded-lg hover:bg-gray-700 text-black">
+                    <img src={gptLogo} alt="ChatGPT Logo" className="w-12 h-8 mr-4" />
+                    <span className='text-xl font-bold'>ChatGPT</span>
                   </a>
                 </div>
               </li>
               <li>
                 <div className="relative group">
-                  <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-700">
-                    <PiSquaresFour className="text-3xl mr-3 text-black" />
-                    <span className='text-black'>Explore GPTs</span>
+                  <a href="#" className="flex items-center p-3 rounded-lg hover:bg-gray-700">
+                    <PiSquaresFour className="text-4xl mr-4 text-black" />
+                    <span className='text-black text-lg'>Explore GPTs</span>
                   </a>
                 </div>
               </li>
@@ -63,7 +63,7 @@ const Sidebar = () => {
         )}
       </aside>
     
-      <main className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'ml-64' : 'ml-16'} p-4`}>
+      <main className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'ml-80' : 'ml-16'} p-4`}>
       
       </main>
     </div>
