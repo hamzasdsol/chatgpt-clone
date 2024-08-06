@@ -8,7 +8,7 @@ import shoppingBagImage from '../../assets/images/shoppingbag.jfif';
 const Main = () => {
   return (
     <div className="flex-1 bg-white p-6 flex flex-col items-center">
-      {/* Adjusted the margin to move the logo and cards down */}
+     
       <img 
         src={gptLogo} 
         alt="ChatGPT Logo" 
