@@ -9,11 +9,12 @@ const Main = () => {
   return (
     <div className="flex-1 bg-white p-6 flex flex-col items-center">
      
-      <img 
-        src={gptLogo} 
-        alt="ChatGPT Logo" 
-        className="w-24 h-16 mt-32 mb-10 rounded-lg" 
-      />
+     <img 
+  src={gptLogo} 
+  alt="ChatGPT Logo" 
+  className="w-20 h-12 mt-40 mb-6 rounded-lg" 
+/>
+
 
       <section className="text-gray-600 body-font mt-16 w-full">
         <div className="container px-5 py-12 mx-auto">
