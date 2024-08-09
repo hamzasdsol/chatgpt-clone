@@ -24,11 +24,11 @@ const Cards = ({ onCardClick }) => {
       {cardsToDisplay.map((card, index) => (
         <div
           key={index}
-          className='w-64 h-40 p-3 bg-white shadow-md rounded-lg cursor-pointer hover:bg-gray-100 transition-all flex flex-col items-center justify-center'
+          className='w-full sm:w-64 md:w-72 lg:w-80 h-40 p-3 bg-white shadow-md rounded-lg cursor-pointer hover:bg-gray-100 transition-all flex flex-col items-center justify-center'
           onClick={() => onCardClick(card.question)}
         >
           <i className={`${card.icon} text-3xl mb-4`}></i>
-          <p className='text-slate-500 text-center'>{card.question}</p>
+          <p className='text-slate-500 text-center text-sm sm:text-base'>{card.question}</p>
         </div>
       ))}
     </div>

@@ -6,7 +6,7 @@ import starImage from '../assets/images/star.jfif';
 import chatGPTImage from '../assets/images/images.jfif';
 import tempChatImage from '../assets/images/download.png';
 
-const Header = () => {
+const Header = ({ isSidebarOpen }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isChecked, setIsChecked] = useState(false); // State for toggle switch
 
@@ -22,14 +22,14 @@ const Header = () => {
     <header className="text-gray-600 body-font md:shrink-0">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center cursor-pointer">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer">
-          <span className="ml-3 text-3xl font-bold text-gray-500">ChatGPT</span>
+          <span className="ml-3 text-3xl font-bold text-gray-500 sm-ms-5 md:text-left">ChatGPT</span>
           <span className="text-5xl text-gray-400 md:shrink-0 cursor-pointer" onClick={toggleModal}>
             <RiArrowDropDownLine />
           </span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
         </nav>
-        <div className="flex items-center ml-8 space-x-5">
+        <div className="flex items-center ml-8 space-x-5 flex-nowrap hidden md:flex">
           <a className="text-4xl relative group" title="">
             <RiShare2Line />
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -80,7 +80,6 @@ const Header = () => {
               <div
                 className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
               ></div>
-             
             </label>
           </div>
         </div>
@@ -90,3 +89,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
