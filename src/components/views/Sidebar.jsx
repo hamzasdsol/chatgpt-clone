@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PiSidebarLight, PiChatTeardropDots, PiSquaresFour } from 'react-icons/pi';
 import { FaTrash } from 'react-icons/fa'; // Font Awesome delete icon
 import gptLogo from '../../assets/images/gpt_logo.png';
 import starImage from '../../assets/images/starimage.png';
 
-const Sidebar = ({ onNewChat, chatHistory, onHistoryItemClick, onDeleteHistory }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
+const Sidebar = ({ isSidebarOpen, toggleSidebar, onNewChat, chatHistory, onHistoryItemClick, onDeleteHistory, isSmallScreen }) => {
+  
   const handleNewChat = () => {
     onNewChat(); // Notify parent to start a new chat
   };
@@ -20,7 +15,7 @@ const Sidebar = ({ onNewChat, chatHistory, onHistoryItemClick, onDeleteHistory }
   };
 
   return (
-    <div className="flex min-h-screen text-white">
+    <div className={`flex min-h-screen text-white ${isSidebarOpen ? '' : 'bg-transparent'}`}>
       <aside className={`text-white ${isSidebarOpen ? 'w-80 bg-gray-100' : 'w-16'} transition-all duration-300 flex flex-col justify-between`}>
         <div>
           <div className={`p-4 flex items-center ${isSidebarOpen ? 'justify-between' : ''} mt-4`}>

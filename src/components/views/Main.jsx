@@ -9,7 +9,7 @@ const Main = ({ chatHistory, showCards }) => {
         <img 
           src={gptLogo} 
           alt="ChatGPT Logo" 
-          className="w-20 h-12 mt-24 mb-8 rounded-lg md:mt-28 md:mb-12" // Adjusted margins for more spacing
+          className="w-20 h-18 mt-24 mb-8 rounded-lg md:mt-28 md:mb-12" // Adjusted margins for more spacing
         />
       )}
       {showCards && <Cards />}
