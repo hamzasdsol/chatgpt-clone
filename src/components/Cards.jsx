@@ -7,9 +7,9 @@ const Cards = ({ onCardClick }) => {
   const isLargeScreen = useMediaQuery({ minWidth: 1025 });
 
   const cards = [
-    { question: "Create a workout plan", icon: "fa-solid fa-pen text-sky-500" },
-    { question: "Overcome procrastination", icon: "fa-solid fa-graduation-cap text-purple-500" },
-    { question: "What to do with art", icon: "fa-regular fa-lightbulb text-yellow-500" },
+    { question: "Create a cartoon illustration for my Pet", icon: "fa-solid fa-pen text-sky-500" },
+    { question: "Make me a personal webPage", icon: "fa-solid fa-graduation-cap text-purple-500" },
+    { question: "Activities to make friends in city", icon: "fa-regular fa-lightbulb text-yellow-500" },
     { question: "Python script for daily email reports", icon: "fa-solid fa-code text-red-500" }
   ];
 
@@ -20,15 +20,17 @@ const Cards = ({ onCardClick }) => {
   const cardsToDisplay = isSmallScreen ? shuffledCards.slice(0, 2) : shuffledCards.slice(0, 4);
 
   return (
-    <div className='flex flex-wrap justify-center gap-4'>
+    <div className='flex flex-wrap justify-center gap-6'>
       {cardsToDisplay.map((card, index) => (
         <div
-          key={index}
-          className='w-full sm:w-64 md:w-72 lg:w-80 h-40 p-3 bg-white shadow-md rounded-lg cursor-pointer hover:bg-gray-100 transition-all flex flex-col items-center justify-center'
-          onClick={() => onCardClick(card.question)}
-        >
-          <i className={`${card.icon} text-3xl mb-4`}></i>
-          <p className='text-slate-500 text-center text-sm sm:text-base'>{card.question}</p>
+        key={index}
+        className='w-64 h-54 p-4 bg-white shadow-lg rounded-xl cursor-pointer hover:bg-gray-200 transition-all flex flex-col'
+        onClick={() => onCardClick(card.question)}
+      >
+          <div className='flex items-start mb-4'>
+            <i className={`${card.icon} text-2xl mt-2 ml-2`}></i>
+          </div>
+          <p className='text-gray-700 text-lg font-normal ml-2'>{card.question}</p> {/* Updated font weight */}
         </div>
       ))}
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/views/Sidebar';
 import Footer from './components/Footer';
@@ -9,9 +9,20 @@ import { PiSidebarLight } from 'react-icons/pi';
 
 const App = () => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Manage sidebar state here
+  
+  // Get initial sidebar state from local storage or default to true
+  const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
+    const savedSidebarState = localStorage.getItem('isSidebarOpen');
+    return savedSidebarState !== null ? JSON.parse(savedSidebarState) : true;
+  });
+
   const [chatHistory, setChatHistory] = useState([]); // Stores all chat sessions
   const [currentChat, setCurrentChat] = useState([]); // Stores the current chat session
+
+  // Save sidebar state to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('isSidebarOpen', JSON.stringify(isSidebarOpen));
+  }, [isSidebarOpen]);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -95,4 +106,3 @@ const App = () => {
 };
 
 export default App;
-  

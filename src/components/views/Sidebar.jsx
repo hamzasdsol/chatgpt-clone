@@ -37,17 +37,19 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, onNewChat, chatHistory, onHisto
               <ul className="space-y-4 p-2">
                 <li>
                   <div className="relative group">
-                    <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-300 text-black pl-4">
-                      <img src={gptLogo} alt="ChatGPT Logo" className="w-10 h-6 mr-2 rounded-full" />
-                      <span className="text-xl font-bold ml-2">ChatGPT</span>
+                  <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-300 text-black pl-4">
+      <img src={gptLogo} alt="ChatGPT Logo" className="w-8 h-6 mr-2 rounded-full" />
+      <span className="text-xl ml-2">ChatGPT</span>
+
                     </a>
                   </div>
                 </li>
                 <li>
                   <div className="relative group">
-                    <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-300 text-black pl-4">
-                      <PiSquaresFour className="text-4xl mr-2 text-black flex-shrink-0 rounded-full w-10 h-6" />
-                      <span className="text-black text-lg flex-shrink-0 ml-2">Explore GPTs</span>
+                  <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-300 text-black pl-4">
+      <PiSquaresFour className="w-8 h-6 mr-2 text-black flex-shrink-0" />
+      <span className="text-xl text-black flex-shrink-0 ml-2">Explore GPTs</span>
+
                     </a>
                   </div>
                 </li>
